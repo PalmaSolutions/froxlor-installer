@@ -27,3 +27,21 @@ then
 		echo $DEBIAN_JESSI
 	fi	
 fi
+
+if [[ $distributor -eq "Ubuntu" ]]
+then
+	if [[ $release =~ ^12.[0-9].[0-9]*$ ]]
+	then
+		echo $DEBIAN_WHEEZY
+	fi	
+
+	if [[ $release =~ ^14.[0-9].[0-9]*$ ]]
+	then
+		echo $DEBIAN_JESSI
+	fi
+	
+	if [[ $release =~ ^15.[0-9].[0-9]*$ ]]
+	then
+		echo $DEBIAN_JESSI
+	fi	
+fi
